@@ -27,13 +27,17 @@ class NetworkProxy: NSObject {
 
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {
+                DispatchQueue.main.async {
                     completion(.failure(NetworkingError.wrongDataFormat))
-                    return
+                }
+                return
             }
         
             guard let imagesInfoResponce = try? JSONDecoder().decode(ImageInfoResponce.self, from: data) else {
+                DispatchQueue.main.async {
                     completion(.failure(NetworkingError.wrongDataFormat))
-                    return
+                }
+                return
             }
             
             let imagesInfo = Array(imagesInfoResponce.results)

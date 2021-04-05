@@ -119,7 +119,7 @@
         <!--Image Details-->
         <scene sceneID="Pql-Z4-oyB">
             <objects>
-                <viewController id="SCc-nr-uuF" sceneMemberID="viewController">
+                <viewController id="SCc-nr-uuF" customClass="ImageDetailsViewController" customModule="SimilarWeb_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Be5-0U-lc2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,6 +179,7 @@
                             <constraint firstItem="WrX-8w-Wga" firstAttribute="bottom" secondItem="yvQ-Ql-f5Q" secondAttribute="bottom" id="TNS-Um-hhm"/>
                             <constraint firstItem="pvH-RP-wCx" firstAttribute="top" secondItem="TRV-e2-SI0" secondAttribute="bottom" constant="10" id="VZG-nJ-QxK"/>
                             <constraint firstItem="lhw-UF-SX5" firstAttribute="top" secondItem="YFY-QI-3VH" secondAttribute="top" constant="20" id="VxF-WI-Hov"/>
+                            <constraint firstItem="lhw-UF-SX5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YFY-QI-3VH" secondAttribute="leading" symbolic="YES" id="W8a-iG-ZT6"/>
                             <constraint firstItem="TRV-e2-SI0" firstAttribute="top" secondItem="lhw-UF-SX5" secondAttribute="bottom" constant="10" id="WQG-de-1iF"/>
                             <constraint firstItem="yvQ-Ql-f5Q" firstAttribute="leading" secondItem="YFY-QI-3VH" secondAttribute="leading" constant="20" id="cC5-IJ-Mwt"/>
                             <constraint firstItem="YFY-QI-3VH" firstAttribute="trailing" secondItem="IwA-F8-Q7E" secondAttribute="trailing" constant="10" id="e8h-Oc-oDH"/>
@@ -193,6 +194,15 @@
                     <navigationItem key="navigationItem" title="Image Details" largeTitleDisplayMode="never" id="ZN7-X1-ym4">
                         <barButtonItem key="backBarButtonItem" title="Back" id="n6N-Em-Pku"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bigImageView" destination="TRV-e2-SI0" id="O89-uL-xF7"/>
+                        <outlet property="descriptionLabel" destination="pvH-RP-wCx" id="XTF-Nz-Ifj"/>
+                        <outlet property="numberOfLikesLabel" destination="lhw-UF-SX5" id="okj-DN-keR"/>
+                        <outlet property="userBioLabel" destination="WrX-8w-Wga" id="KyO-5T-FWM"/>
+                        <outlet property="userFullNameLabel" destination="IwA-F8-Q7E" id="BqX-tT-PJN"/>
+                        <outlet property="userThumbnailImageView" destination="yvQ-Ql-f5Q" id="klq-pP-khL"/>
+                        <outlet property="usernameLabel" destination="nW9-sO-WY8" id="Kfm-bm-Zu2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1o9-6s-t9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

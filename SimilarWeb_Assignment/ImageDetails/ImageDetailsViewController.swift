@@ -12,10 +12,17 @@ class ImageDetailsViewController: UIViewController {
 
     public var viewModel: ImageDetailsViewModel?
 
+    @IBOutlet private var numberOfLikesLabel: UILabel!
+    @IBOutlet private var bigImageView: UIImageView!
+    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var userThumbnailImageView: UIImageView!
+    @IBOutlet private var userFullNameLabel: UILabel!
+    @IBOutlet private var usernameLabel: UILabel!
+    @IBOutlet private var userBioLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView(viewModel: viewModel)
     }
 }
 
@@ -24,5 +31,15 @@ extension ImageDetailsViewController: Presentable {
         guard let viewModel = viewModel as? ImageDetailsViewModel else {
             return
         }
+        
+        numberOfLikesLabel.text = viewModel.likes
+        bigImageView?.af.setImage(withURL: viewModel.imageURL)
+        descriptionLabel.text = viewModel.description
+        if let userImageURL = viewModel.userImageURL {
+            userThumbnailImageView?.af.setImage(withURL: userImageURL)
+        }
+        userFullNameLabel.text = viewModel.name
+        usernameLabel.text = viewModel.username
+        userBioLabel.text = viewModel.bio
     }
 }

@@ -83,7 +83,7 @@ extension ImagesListViewController: UITableViewDataSource {
 
 extension ImagesListViewController: UITableViewDelegate {
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let weatherInfo = filteredImageInfos[indexPath.row]
-        self.performSegue(withIdentifier: ImageDetailsViewController.className, sender: weatherInfo)
+        let imageInfo = filteredImageInfos[indexPath.row]
+        self.performSegue(withIdentifier: ImageDetailsViewController.className, sender: imageInfo)
     }
 }

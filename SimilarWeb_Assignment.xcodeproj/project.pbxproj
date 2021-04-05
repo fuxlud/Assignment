@@ -23,6 +23,7 @@
 		841AD929261AF56E0044154A /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD928261AF56E0044154A /* Presentable.swift */; };
 		841AD92C261B04170044154A /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD92B261B04160044154A /* ImageDetailsViewController.swift */; };
 		841AD92E261B04280044154A /* ImageDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD92D261B04270044154A /* ImageDetailsViewModel.swift */; };
+		841AD930261B11D30044154A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD92F261B11D30044154A /* User.swift */; };
 		93CC74916DA20EDA5B969169 /* Pods_SimilarWeb_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9784DCD6E7AFADF5E4F9A6 /* Pods_SimilarWeb_Assignment.framework */; };
 		97810367C8644984DD98A667 /* Pods_SimilarWeb_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493484CCCC2EAA8E5D32AF80 /* Pods_SimilarWeb_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		841AD928261AF56E0044154A /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		841AD92B261B04160044154A /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
 		841AD92D261B04270044154A /* ImageDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewModel.swift; sourceTree = "<group>"; };
+		841AD92F261B11D30044154A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84B5E5C15515E42175F78B07 /* Pods-SimilarWeb_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_Assignment.release.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_Assignment/Pods-SimilarWeb_Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		D0D616DE973D557A10F61E66 /* Pods-SimilarWeb_AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_AssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_AssignmentTests/Pods-SimilarWeb_AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				841AD919261AF04F0044154A /* ImageInfo.swift */,
+				841AD92F261B11D30044154A /* User.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841AD930261B11D30044154A /* User.swift in Sources */,
 				841AD91A261AF04F0044154A /* ImageInfo.swift in Sources */,
 				841AD921261AF3DE0044154A /* Extensions.swift in Sources */,
 				841AD927261AF55D0044154A /* Modelling.swift in Sources */,

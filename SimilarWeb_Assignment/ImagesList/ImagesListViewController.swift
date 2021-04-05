@@ -14,11 +14,9 @@ class ImagesListViewController: UIViewController {
     
     private var networkProxy = NetworkProxy()
     private var imageInfos: [ImageInfo] = []
-    private var filteredImageInfos: [ImageInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.prefersLargeTitles = true
         fetchImagesInfo()
     }
     
@@ -29,7 +27,6 @@ class ImagesListViewController: UIViewController {
                 self?.showError(error: error)
             case let .success(imageInfos):
                 self?.imageInfos = imageInfos
-                self?.filteredImageInfos = imageInfos
                 self?.tableView?.reloadData()
             }
         }
@@ -48,24 +45,15 @@ class ImagesListViewController: UIViewController {
 }
 
 extension ImagesListViewController: UISearchBarDelegate {
-    internal func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        if searchText == "" {
-            filteredImageInfos = imageInfos
-        } else {
-            filteredImageInfos = imageInfos.filter { (imageInfo: ImageInfo) -> Bool in
-                return (imageInfo.imageDescription.lowercased().contains(searchText.lowercased()) ?? false)
-            }
-        }
-        
-        tableView?.reloadData()
+    
+    internal func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        print("")
     }
 }
 
-
 extension ImagesListViewController: UITableViewDataSource {
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredImageInfos.count
+        return imageInfos.count
     }
 
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,7 +61,7 @@ extension ImagesListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
 
-        let imageInfo = filteredImageInfos[indexPath.row]
+        let imageInfo = imageInfos[indexPath.row]
         let imageInfoViewModel = ImageInfoViewModel(with: imageInfo)
 
         cell.setupView(viewModel: imageInfoViewModel)
@@ -83,7 +71,8 @@ extension ImagesListViewController: UITableViewDataSource {
 
 extension ImagesListViewController: UITableViewDelegate {
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let imageInfo = filteredImageInfos[indexPath.row]
+        let imageInfo = imageInfos[indexPath.row]
         self.performSegue(withIdentifier: ImageDetailsViewController.className, sender: imageInfo)
     }
 }
+

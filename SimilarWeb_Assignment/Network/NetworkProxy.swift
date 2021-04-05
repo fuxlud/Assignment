@@ -16,7 +16,11 @@ enum NetworkingError: Error {
 
 class NetworkProxy: NSObject {
     
+    var session = URLSession.shared
+    
     public func fetchImagesInfo(completion: @escaping (_ result: Result<[ImageInfo], Error>) -> Void) {
+        
+        session.invalidateAndCancel()
         
         let endpoint = "https://api.unsplash.com/search/photos?page=1&client_id=c99a7e7599297260b46b7c9cf36727badeb1d37b1f24aa9ef5d844e3fbed76fe&query=flower"
     
@@ -25,7 +29,7 @@ class NetworkProxy: NSObject {
             return
         }
 
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        session.dataTask(with: url) { data, response, error in
             guard let data = data else {
                 DispatchQueue.main.async {
                     completion(.failure(NetworkingError.wrongDataFormat))

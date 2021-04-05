@@ -31,13 +31,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-R8-qom">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="VBy-b7-47G" id="GiB-kp-OmR"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0yR-JO-0tb">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -52,7 +45,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0HR-6o-Y2E">
                                                     <rect key="frame" x="15" y="15.5" width="70" height="70"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="70" id="vHO-9I-Yaa"/>
+                                                        <constraint firstAttribute="height" constant="70" id="Xpn-TP-GmO"/>
                                                         <constraint firstAttribute="width" secondItem="0HR-6o-Y2E" secondAttribute="height" multiplier="1:1" id="yHk-p8-Bk6"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -93,16 +86,23 @@
                                     <outlet property="delegate" destination="VBy-b7-47G" id="dgk-d9-ux8"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wuI-2R-tdi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VBy-b7-47G" id="kao-E3-Sk0"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wuI-2R-tdi" firstAttribute="trailing" secondItem="b0k-IT-MSV" secondAttribute="trailing" id="2O1-kS-GNv"/>
                             <constraint firstAttribute="bottom" secondItem="0yR-JO-0tb" secondAttribute="bottom" id="63J-px-Hyq"/>
-                            <constraint firstItem="0yR-JO-0tb" firstAttribute="top" secondItem="qpf-R8-qom" secondAttribute="bottom" id="Ko6-P2-Npt"/>
-                            <constraint firstItem="qpf-R8-qom" firstAttribute="top" secondItem="b0k-IT-MSV" secondAttribute="top" id="QEb-Dn-Yde"/>
+                            <constraint firstItem="wuI-2R-tdi" firstAttribute="leading" secondItem="b0k-IT-MSV" secondAttribute="leading" id="8SA-ll-egH"/>
+                            <constraint firstItem="0yR-JO-0tb" firstAttribute="top" secondItem="wuI-2R-tdi" secondAttribute="bottom" id="ANr-PM-ge7"/>
+                            <constraint firstItem="wuI-2R-tdi" firstAttribute="top" secondItem="b0k-IT-MSV" secondAttribute="top" id="DOG-0q-8Yb"/>
                             <constraint firstItem="0yR-JO-0tb" firstAttribute="trailing" secondItem="b0k-IT-MSV" secondAttribute="trailing" id="V90-Ve-3Co"/>
                             <constraint firstItem="0yR-JO-0tb" firstAttribute="leading" secondItem="b0k-IT-MSV" secondAttribute="leading" id="er1-as-Rqe"/>
-                            <constraint firstItem="qpf-R8-qom" firstAttribute="trailing" secondItem="b0k-IT-MSV" secondAttribute="trailing" id="qoJ-4t-JMW"/>
-                            <constraint firstItem="qpf-R8-qom" firstAttribute="leading" secondItem="b0k-IT-MSV" secondAttribute="leading" id="yHt-Kb-aXE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b0k-IT-MSV"/>
                     </view>

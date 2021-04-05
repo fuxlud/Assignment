@@ -18,13 +18,14 @@ class NetworkProxy: NSObject {
     
     var session = URLSession.shared
     
-    public func fetchImagesInfo(completion: @escaping (_ result: Result<[ImageInfo], Error>) -> Void) {
+    public func fetchImagesInfo(query: String, completion: @escaping (_ result: Result<[ImageInfo], Error>) -> Void) {
         
         session.invalidateAndCancel()
         
-        let endpoint = "https://api.unsplash.com/search/photos?page=1&client_id=c99a7e7599297260b46b7c9cf36727badeb1d37b1f24aa9ef5d844e3fbed76fe&query=flower"
-    
-        guard let url = URL(string: endpoint) else {
+        let endpoint = "\(Constants.endpoint)"
+        let path = String.localizedStringWithFormat(endpoint, query)
+
+        guard let url = URL(string: path) else {
             completion(.failure(NetworkingError.couldNotConstructURL))
             return
         }

@@ -29,12 +29,12 @@ class ImagesListViewController: UIViewController {
 
 extension ImagesListViewController: UISearchBarDelegate {
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        fetchImagesInfo()
+        fetchImagesInfo(query: searchBar.text ?? "")
         searchBar.resignFirstResponder()
     }
     
-    private func fetchImagesInfo() {
-        networkProxy.fetchImagesInfo { [weak self] result in
+    private func fetchImagesInfo(query: String) {
+        networkProxy.fetchImagesInfo(query: query) { [weak self] result in
             switch result {
             case let .failure(error):
                 self?.showError(error: error)

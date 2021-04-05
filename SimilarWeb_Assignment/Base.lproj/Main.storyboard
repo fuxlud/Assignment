@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-334" y="271"/>
         </scene>
-        <!--View Controller-->
+        <!--Images List View Controller-->
         <scene sceneID="8nH-Kf-kfm">
             <objects>
-                <viewController id="VBy-b7-47G" sceneMemberID="viewController">
+                <viewController id="VBy-b7-47G" customClass="ImagesListViewController" customModule="SimilarWeb_Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bse-81-ubX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="101" id="UdO-yY-fqh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ImageInfoTableViewCell" rowHeight="101" id="UdO-yY-fqh" customClass="ImageInfoTableViewCell" customModule="SimilarWeb_Assignment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UdO-yY-fqh" id="tnN-nw-US6">
@@ -82,6 +82,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VBy-b7-47G" id="fAz-B9-Uax"/>
+                                    <outlet property="delegate" destination="VBy-b7-47G" id="dgk-d9-ux8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -97,6 +101,9 @@
                         <viewLayoutGuide key="safeArea" id="b0k-IT-MSV"/>
                     </view>
                     <navigationItem key="navigationItem" id="pfc-m1-Gwa"/>
+                    <connections>
+                        <outlet property="tableView" destination="0yR-JO-0tb" id="nOp-vI-KNU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DF6-eh-9ED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

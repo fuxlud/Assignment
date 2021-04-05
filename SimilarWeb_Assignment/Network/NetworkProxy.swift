@@ -18,7 +18,7 @@ class NetworkProxy: NSObject {
     
     public func fetchImagesInfo(completion: @escaping (_ result: Result<[ImageInfo], Error>) -> Void) {
         
-        let endpoint = " https://api.unsplash.com/search/photos?page=1&client_id=c99a7e7599297260b46b7c9cf36727badeb1d37b1f24aa9ef5d844e3fbed76fe&query=sea"
+        let endpoint = "https://api.unsplash.com/search/photos?page=1&client_id=c99a7e7599297260b46b7c9cf36727badeb1d37b1f24aa9ef5d844e3fbed76fe&query=sea"
     
         guard let url = URL(string: endpoint) else {
             completion(.failure(NetworkingError.couldNotConstructURL))

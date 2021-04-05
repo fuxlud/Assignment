@@ -11,6 +11,7 @@ import UIKit
 class ImagesListViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView?
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var networkProxy = NetworkProxy()
     private var imageInfos: [ImageInfo] = []
@@ -31,10 +32,14 @@ extension ImagesListViewController: UISearchBarDelegate {
     internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         fetchImagesInfo(query: searchBar.text ?? "")
         searchBar.resignFirstResponder()
+        activityIndicator.startAnimating()
     }
     
     private func fetchImagesInfo(query: String) {
         networkProxy.fetchImagesInfo(query: query) { [weak self] result in
+            
+            self?.activityIndicator.stopAnimating()
+            
             switch result {
             case let .failure(error):
                 self?.showError(error: error)

@@ -34,6 +34,9 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-R8-qom">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VBy-b7-47G" id="GiB-kp-OmR"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="300" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0yR-JO-0tb">
                                 <rect key="frame" x="0.0" y="144" width="414" height="752"/>
@@ -75,11 +78,17 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="PAx-Gl-EBM" secondAttribute="trailing" constant="15" id="1ww-dG-lSV"/>
                                                 <constraint firstItem="PAx-Gl-EBM" firstAttribute="leading" secondItem="0HR-6o-Y2E" secondAttribute="trailing" constant="15" id="AP3-RD-bcm"/>
+                                                <constraint firstAttribute="bottom" secondItem="0HR-6o-Y2E" secondAttribute="bottom" constant="15.5" id="Aak-Pi-HDX"/>
+                                                <constraint firstItem="0HR-6o-Y2E" firstAttribute="top" secondItem="tnN-nw-US6" secondAttribute="top" constant="15.5" id="FSC-W9-be9"/>
                                                 <constraint firstItem="PAx-Gl-EBM" firstAttribute="centerY" secondItem="tnN-nw-US6" secondAttribute="centerY" id="JgQ-WI-vJV"/>
                                                 <constraint firstItem="0HR-6o-Y2E" firstAttribute="centerY" secondItem="tnN-nw-US6" secondAttribute="centerY" id="Ydx-Hs-3HI"/>
                                                 <constraint firstItem="0HR-6o-Y2E" firstAttribute="leading" secondItem="tnN-nw-US6" secondAttribute="leading" constant="15" id="vrI-TJ-p0Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="PAx-Gl-EBM" id="aUh-Rx-U07"/>
+                                            <outlet property="iconImageView" destination="0HR-6o-Y2E" id="2WX-rV-nO6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

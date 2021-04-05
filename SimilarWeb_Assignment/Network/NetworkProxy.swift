@@ -37,7 +37,7 @@ class NetworkProxy: NSObject {
 //            }
             
             var imageData = [ImageInfo]()
-            imageData.append(ImageInfo(imageURL: URL(string: "https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg")!, imageDescription: "A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants The biological function of a flower is to facilitate"))
+            imageData.append(ImageInfo(imageURL: URL(string: "https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg")!, imageDescription: "A flower"))
             
             imageData.append(ImageInfo(imageURL: URL(string: "https://pbs.twimg.com/profile_images/883859744498176000/pjEHfbdn_400x400.jpg")!, imageDescription: "A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants The biological function of a flower is to facilitate"))
             

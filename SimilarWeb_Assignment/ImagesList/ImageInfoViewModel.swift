@@ -21,6 +21,6 @@ class ImageInfoViewModel: Modelling {
     }
     
     public var imageURL: URL {
-        return imageInfo.imageURL
+        return imageInfo.urls.thumb
     }
 }

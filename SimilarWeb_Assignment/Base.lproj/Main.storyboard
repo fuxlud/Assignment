@@ -132,25 +132,25 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-F8-Q7E">
-                                <rect key="frame" x="160" y="742" width="244" height="21"/>
+                                <rect key="frame" x="160" y="742" width="234" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW9-sO-WY8">
-                                <rect key="frame" x="160" y="773" width="244" height="21"/>
+                                <rect key="frame" x="160" y="773" width="234" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrX-8w-Wga">
-                                <rect key="frame" x="160" y="804" width="244" height="58"/>
+                                <rect key="frame" x="160" y="804" width="234" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvH-RP-wCx">
-                                <rect key="frame" x="137.5" y="691" width="139" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvH-RP-wCx">
+                                <rect key="frame" x="20" y="691" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -175,15 +175,16 @@
                             <constraint firstItem="WrX-8w-Wga" firstAttribute="top" secondItem="nW9-sO-WY8" secondAttribute="bottom" constant="10" id="Ipp-a6-s26"/>
                             <constraint firstItem="nW9-sO-WY8" firstAttribute="trailing" secondItem="IwA-F8-Q7E" secondAttribute="trailing" id="K55-z7-7mD"/>
                             <constraint firstItem="IwA-F8-Q7E" firstAttribute="top" secondItem="pvH-RP-wCx" secondAttribute="bottom" constant="30" id="KIL-fh-HIs"/>
+                            <constraint firstItem="pvH-RP-wCx" firstAttribute="leading" secondItem="TRV-e2-SI0" secondAttribute="leading" id="Kle-4i-v9g"/>
+                            <constraint firstItem="pvH-RP-wCx" firstAttribute="trailing" secondItem="TRV-e2-SI0" secondAttribute="trailing" id="MUj-Bd-MPE"/>
                             <constraint firstItem="WrX-8w-Wga" firstAttribute="trailing" secondItem="nW9-sO-WY8" secondAttribute="trailing" id="Mpd-tM-MqW"/>
                             <constraint firstItem="WrX-8w-Wga" firstAttribute="bottom" secondItem="yvQ-Ql-f5Q" secondAttribute="bottom" id="TNS-Um-hhm"/>
                             <constraint firstItem="pvH-RP-wCx" firstAttribute="top" secondItem="TRV-e2-SI0" secondAttribute="bottom" constant="10" id="VZG-nJ-QxK"/>
                             <constraint firstItem="lhw-UF-SX5" firstAttribute="top" secondItem="YFY-QI-3VH" secondAttribute="top" constant="20" id="VxF-WI-Hov"/>
                             <constraint firstItem="lhw-UF-SX5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YFY-QI-3VH" secondAttribute="leading" symbolic="YES" id="W8a-iG-ZT6"/>
                             <constraint firstItem="TRV-e2-SI0" firstAttribute="top" secondItem="lhw-UF-SX5" secondAttribute="bottom" constant="10" id="WQG-de-1iF"/>
+                            <constraint firstItem="IwA-F8-Q7E" firstAttribute="trailing" secondItem="TRV-e2-SI0" secondAttribute="trailing" id="aMp-iB-L36"/>
                             <constraint firstItem="yvQ-Ql-f5Q" firstAttribute="leading" secondItem="YFY-QI-3VH" secondAttribute="leading" constant="20" id="cC5-IJ-Mwt"/>
-                            <constraint firstItem="YFY-QI-3VH" firstAttribute="trailing" secondItem="IwA-F8-Q7E" secondAttribute="trailing" constant="10" id="e8h-Oc-oDH"/>
-                            <constraint firstItem="pvH-RP-wCx" firstAttribute="centerX" secondItem="Be5-0U-lc2" secondAttribute="centerX" id="hIm-gX-adD"/>
                             <constraint firstItem="YFY-QI-3VH" firstAttribute="trailing" secondItem="TRV-e2-SI0" secondAttribute="trailing" constant="20" id="jS0-eZ-UMe"/>
                             <constraint firstItem="nW9-sO-WY8" firstAttribute="leading" secondItem="IwA-F8-Q7E" secondAttribute="leading" id="poq-i0-Uop"/>
                             <constraint firstItem="lhw-UF-SX5" firstAttribute="trailing" secondItem="TRV-e2-SI0" secondAttribute="trailing" id="qZ1-QX-gZR"/>

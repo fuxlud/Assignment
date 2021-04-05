@@ -1,5 +1,5 @@
 //
-//  SimilarWeb_AssignmentTests.swift
+//  UserTests.swift
 //  SimilarWeb_AssignmentTests
 //
 //  Created by Admin on 05/04/2021.
@@ -7,9 +7,8 @@
 //
 
 import XCTest
-@testable import SimilarWeb_Assignment
 
-class SimilarWeb_AssignmentTests: XCTestCase {
+class UserTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -16,6 +16,10 @@ class ImageInfoTableViewCell: UITableViewCell {
     
     @IBOutlet private var iconImageView: UIImageView?
     @IBOutlet private var descriptionLabel: UILabel?
+    
+    override func draw(_ rect: CGRect) {
+        iconImageView?.borderColor = UIColor.gray
+    }
 }
 
 extension ImageInfoTableViewCell: Presentable {

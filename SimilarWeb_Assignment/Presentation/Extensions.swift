@@ -27,3 +27,15 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 }
+
+extension UIView {
+    var borderColor: UIColor {
+        set {
+            self.layer.borderColor = newValue.cgColor
+        }
+
+        get {
+            return UIColor(cgColor: self.layer.borderColor ?? UIColor(cgColor: UIColor.clear.cgColor) as! CGColor)
+        }
+    }
+}

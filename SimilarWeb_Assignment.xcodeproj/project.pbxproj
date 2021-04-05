@@ -27,6 +27,9 @@
 		84B0055E261B30F60032C304 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0055D261B30F60032C304 /* Constants.swift */; };
 		84B00560261B890B0032C304 /* imageInfoResponce.json in Resources */ = {isa = PBXBuildFile; fileRef = 84B0055F261B890B0032C304 /* imageInfoResponce.json */; };
 		84B00562261B8AB00032C304 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B00561261B8AAF0032C304 /* UserTests.swift */; };
+		84B00564261B91540032C304 /* PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B00563261B91540032C304 /* PresentationTests.swift */; };
+		84B00568261B9C430032C304 /* ImageInfoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B00567261B9C430032C304 /* ImageInfoMock.swift */; };
+		84B0056A261B9D680032C304 /* imageInfoResponce.json in Resources */ = {isa = PBXBuildFile; fileRef = 84B0055F261B890B0032C304 /* imageInfoResponce.json */; };
 		93CC74916DA20EDA5B969169 /* Pods_SimilarWeb_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9784DCD6E7AFADF5E4F9A6 /* Pods_SimilarWeb_Assignment.framework */; };
 		97810367C8644984DD98A667 /* Pods_SimilarWeb_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493484CCCC2EAA8E5D32AF80 /* Pods_SimilarWeb_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +73,8 @@
 		84B0055D261B30F60032C304 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84B0055F261B890B0032C304 /* imageInfoResponce.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = imageInfoResponce.json; sourceTree = "<group>"; };
 		84B00561261B8AAF0032C304 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		84B00563261B91540032C304 /* PresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationTests.swift; sourceTree = "<group>"; };
+		84B00567261B9C430032C304 /* ImageInfoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfoMock.swift; sourceTree = "<group>"; };
 		84B5E5C15515E42175F78B07 /* Pods-SimilarWeb_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_Assignment.release.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_Assignment/Pods-SimilarWeb_Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		D0D616DE973D557A10F61E66 /* Pods-SimilarWeb_AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_AssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_AssignmentTests/Pods-SimilarWeb_AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,10 +157,11 @@
 		841AD909261AE6630044154A /* SimilarWeb_AssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				84B0055F261B890B0032C304 /* imageInfoResponce.json */,
 				841AD90A261AE6630044154A /* DomainTests.swift */,
+				84B00563261B91540032C304 /* PresentationTests.swift */,
 				841AD90C261AE6630044154A /* Info.plist */,
 				84B00561261B8AAF0032C304 /* UserTests.swift */,
+				84B00569261B9C9C0032C304 /* Mock */,
 			);
 			path = SimilarWeb_AssignmentTests;
 			sourceTree = "<group>";
@@ -216,6 +222,15 @@
 				841AD92D261B04270044154A /* ImageDetailsViewModel.swift */,
 			);
 			path = ImageDetails;
+			sourceTree = "<group>";
+		};
+		84B00569261B9C9C0032C304 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				84B00567261B9C430032C304 /* ImageInfoMock.swift */,
+				84B0055F261B890B0032C304 /* imageInfoResponce.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B0056A261B9D680032C304 /* imageInfoResponce.json in Resources */,
 				841AD900261AE6630044154A /* LaunchScreen.storyboard in Resources */,
 				841AD8FD261AE6630044154A /* Assets.xcassets in Resources */,
 				841AD8FB261AE65C0044154A /* Main.storyboard in Resources */,
@@ -394,6 +410,7 @@
 				841AD929261AF56E0044154A /* Presentable.swift in Sources */,
 				841AD8F4261AE65C0044154A /* AppDelegate.swift in Sources */,
 				841AD91E261AF18C0044154A /* NetworkProxy.swift in Sources */,
+				84B00568261B9C430032C304 /* ImageInfoMock.swift in Sources */,
 				841AD923261AF4EE0044154A /* ImageInfoTableViewCell.swift in Sources */,
 				841AD92E261B04280044154A /* ImageDetailsViewModel.swift in Sources */,
 				841AD917261AEFBA0044154A /* ImagesListViewController.swift in Sources */,
@@ -409,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B00562261B8AB00032C304 /* UserTests.swift in Sources */,
+				84B00564261B91540032C304 /* PresentationTests.swift in Sources */,
 				841AD90B261AE6630044154A /* DomainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,21 +11,23 @@ import XCTest
 
 class DomainTests: XCTestCase {
 
-    var imageInfo: ImageInfo?
+    var imageInfo: ImageInfo!
     
     override func setUp() {
-        let imageInfoResponce = DomainTests.decodeableFromImageInfoResponse()
-        let imageInfos = imageInfoResponce.results
-        imageInfo = imageInfos[0]
+        imageInfo = ImageInfo.mock()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
     }
     
     func testImageInfoProperties() {
-        XCTAssert(imageInfo!.imageDescription == "orange petaled flowers")
-        XCTAssert(imageInfo!.likes == 4843)
+        XCTAssert(imageInfo.imageDescription == "orange petaled flowers")
+        XCTAssert(imageInfo.likes == 4843)
     }
     
     func testUserProperties() {
-        let user = imageInfo!.user
+        let user = imageInfo.user
         
         XCTAssert(user!.username == "monstercritic")
         XCTAssert(user!.name == "Sergey Shmidt")
@@ -33,19 +35,19 @@ class DomainTests: XCTestCase {
     }
 
     func testImageInfoURLS() {
-        let urls = imageInfo!.urls
+        let urls = imageInfo.urls
 
         XCTAssert(urls.thumb.absoluteString == "https://images.unsplash.com/photo-1490750967868-88aa4486c946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMDQ1OTN8MHwxfHNlYXJjaHwxfHxmbG93ZXJ8ZW58MHx8fHwxNjE3NjExNjUw&ixlib=rb-1.2.1&q=80&w=200")
         XCTAssert(urls.full.absoluteString == "https://images.unsplash.com/photo-1490750967868-88aa4486c946?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxMDQ1OTN8MHwxfHNlYXJjaHwxfHxmbG93ZXJ8ZW58MHx8fHwxNjE3NjExNjUw&ixlib=rb-1.2.1&q=85")
         XCTAssert(urls.regular.absoluteString == "https://images.unsplash.com/photo-1490750967868-88aa4486c946?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMDQ1OTN8MHwxfHNlYXJjaHwxfHxmbG93ZXJ8ZW58MHx8fHwxNjE3NjExNjUw&ixlib=rb-1.2.1&q=80&w=1080")
     }
 
-    class func decodeableFromImageInfoResponse() -> ImageInfoResponce {
-        let path = Bundle(for: self).path(forResource: "imageInfoResponce", ofType: "json")!
-        let jsonString = try! String(contentsOfFile: path)
-        let data = jsonString.data(using: .utf8)!
-        let decodedObject = try! JSONDecoder().decode(ImageInfoResponce.self, from: data)
-        return decodedObject
-    }
+//    class func decodeableFromImageInfoResponse() -> ImageInfoResponce {
+//        let path = Bundle(for: self).path(forResource: "imageInfoResponce", ofType: "json")!
+//        let jsonString = try! String(contentsOfFile: path)
+//        let data = jsonString.data(using: .utf8)!
+//        let decodedObject = try! JSONDecoder().decode(ImageInfoResponce.self, from: data)
+//        return decodedObject
+//    }
 
 }

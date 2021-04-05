@@ -21,6 +21,8 @@
 		841AD925261AF5260044154A /* ImageInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD924261AF5260044154A /* ImageInfoViewModel.swift */; };
 		841AD927261AF55D0044154A /* Modelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD926261AF55D0044154A /* Modelling.swift */; };
 		841AD929261AF56E0044154A /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD928261AF56E0044154A /* Presentable.swift */; };
+		841AD92C261B04170044154A /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD92B261B04160044154A /* ImageDetailsViewController.swift */; };
+		841AD92E261B04280044154A /* ImageDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD92D261B04270044154A /* ImageDetailsViewModel.swift */; };
 		93CC74916DA20EDA5B969169 /* Pods_SimilarWeb_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9784DCD6E7AFADF5E4F9A6 /* Pods_SimilarWeb_Assignment.framework */; };
 		97810367C8644984DD98A667 /* Pods_SimilarWeb_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493484CCCC2EAA8E5D32AF80 /* Pods_SimilarWeb_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		841AD924261AF5260044154A /* ImageInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInfoViewModel.swift; sourceTree = "<group>"; };
 		841AD926261AF55D0044154A /* Modelling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modelling.swift; sourceTree = "<group>"; };
 		841AD928261AF56E0044154A /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		841AD92B261B04160044154A /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
+		841AD92D261B04270044154A /* ImageDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewModel.swift; sourceTree = "<group>"; };
 		84B5E5C15515E42175F78B07 /* Pods-SimilarWeb_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_Assignment.release.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_Assignment/Pods-SimilarWeb_Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		D0D616DE973D557A10F61E66 /* Pods-SimilarWeb_AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_AssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_AssignmentTests/Pods-SimilarWeb_AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				841AD915261AEF810044154A /* ImagesList */,
+				841AD92A261B03E70044154A /* ImageDetails */,
 				841AD918261AF0340044154A /* Domain */,
 				841AD91F261AF3B90044154A /* Presentation */,
 				841AD91C261AF16A0044154A /* Network */,
@@ -190,6 +195,15 @@
 				841AD928261AF56E0044154A /* Presentable.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		841AD92A261B03E70044154A /* ImageDetails */ = {
+			isa = PBXGroup;
+			children = (
+				841AD92B261B04160044154A /* ImageDetailsViewController.swift */,
+				841AD92D261B04270044154A /* ImageDetailsViewModel.swift */,
+			);
+			path = ImageDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,8 +381,10 @@
 				841AD8F4261AE65C0044154A /* AppDelegate.swift in Sources */,
 				841AD91E261AF18C0044154A /* NetworkProxy.swift in Sources */,
 				841AD923261AF4EE0044154A /* ImageInfoTableViewCell.swift in Sources */,
+				841AD92E261B04280044154A /* ImageDetailsViewModel.swift in Sources */,
 				841AD917261AEFBA0044154A /* ImagesListViewController.swift in Sources */,
 				841AD925261AF5260044154A /* ImageInfoViewModel.swift in Sources */,
+				841AD92C261B04170044154A /* ImageDetailsViewController.swift in Sources */,
 				841AD8F6261AE65C0044154A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -112,11 +112,30 @@
                     <navigationItem key="navigationItem" title="Home Assignment" id="pfc-m1-Gwa"/>
                     <connections>
                         <outlet property="tableView" destination="0yR-JO-0tb" id="nOp-vI-KNU"/>
+                        <segue destination="SCc-nr-uuF" kind="show" identifier="ImageDetailsViewController" id="sCi-dk-yz0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DF6-eh-9ED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="534.78260869565224" y="275.22321428571428"/>
+        </scene>
+        <!--Image Details-->
+        <scene sceneID="Pql-Z4-oyB">
+            <objects>
+                <viewController id="SCc-nr-uuF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Be5-0U-lc2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YFY-QI-3VH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Details" largeTitleDisplayMode="never" id="ZN7-X1-ym4">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="n6N-Em-Pku"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1o9-6s-t9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="275"/>
         </scene>
     </scenes>
 </document>

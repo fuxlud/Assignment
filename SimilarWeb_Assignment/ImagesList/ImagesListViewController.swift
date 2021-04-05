@@ -34,7 +34,34 @@ class ImagesListViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let imageDetailsViewController = segue.destination as? ImageDetailsViewController {
+            guard let imageInfo = sender as? ImageInfo else {
+                return
+            }
+            
+            let imageInfoViewModel = ImageDetailsViewModel(with: imageInfo)
+            imageDetailsViewController.viewModel = imageInfoViewModel
+        }
+    }
 }
+
+extension ImagesListViewController: UISearchBarDelegate {
+    internal func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText == "" {
+            filteredImageInfos = imageInfos
+        } else {
+            filteredImageInfos = imageInfos.filter { (imageInfo: ImageInfo) -> Bool in
+                return (imageInfo.imageDescription.lowercased().contains(searchText.lowercased()) ?? false)
+            }
+        }
+        
+        tableView?.reloadData()
+    }
+}
+
 
 extension ImagesListViewController: UITableViewDataSource {
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,17 +81,9 @@ extension ImagesListViewController: UITableViewDataSource {
     }
 }
 
-extension ImagesListViewController: UISearchBarDelegate {
-    internal func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        if searchText == "" {
-            filteredImageInfos = imageInfos
-        } else {
-            filteredImageInfos = imageInfos.filter { (imageInfo: ImageInfo) -> Bool in
-                return (imageInfo.imageDescription.lowercased().contains(searchText.lowercased()) ?? false)
-            }
-        }
-        
-        tableView?.reloadData()
+extension ImagesListViewController: UITableViewDelegate {
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let weatherInfo = filteredImageInfos[indexPath.row]
+        self.performSegue(withIdentifier: ImageDetailsViewController.className, sender: weatherInfo)
     }
 }

@@ -14,6 +14,8 @@
 		841AD8FD261AE6630044154A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841AD8FC261AE6630044154A /* Assets.xcassets */; };
 		841AD900261AE6630044154A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841AD8FE261AE6630044154A /* LaunchScreen.storyboard */; };
 		841AD90B261AE6630044154A /* SimilarWeb_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AD90A261AE6630044154A /* SimilarWeb_AssignmentTests.swift */; };
+		93CC74916DA20EDA5B969169 /* Pods_SimilarWeb_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D9784DCD6E7AFADF5E4F9A6 /* Pods_SimilarWeb_Assignment.framework */; };
+		97810367C8644984DD98A667 /* Pods_SimilarWeb_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493484CCCC2EAA8E5D32AF80 /* Pods_SimilarWeb_AssignmentTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		277D691649BF5F9B22E99800 /* Pods-SimilarWeb_AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_AssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_AssignmentTests/Pods-SimilarWeb_AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		493484CCCC2EAA8E5D32AF80 /* Pods_SimilarWeb_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimilarWeb_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D9784DCD6E7AFADF5E4F9A6 /* Pods_SimilarWeb_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimilarWeb_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83FA0E1AB810A750C51A42FB /* Pods-SimilarWeb_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_Assignment.debug.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_Assignment/Pods-SimilarWeb_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		841AD8F0261AE65C0044154A /* SimilarWeb_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimilarWeb_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841AD8F3261AE65C0044154A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		841AD8F5261AE65C0044154A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		841AD906261AE6630044154A /* SimilarWeb_AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimilarWeb_AssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		841AD90A261AE6630044154A /* SimilarWeb_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarWeb_AssignmentTests.swift; sourceTree = "<group>"; };
 		841AD90C261AE6630044154A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B5E5C15515E42175F78B07 /* Pods-SimilarWeb_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_Assignment.release.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_Assignment/Pods-SimilarWeb_Assignment.release.xcconfig"; sourceTree = "<group>"; };
+		D0D616DE973D557A10F61E66 /* Pods-SimilarWeb_AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimilarWeb_AssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-SimilarWeb_AssignmentTests/Pods-SimilarWeb_AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CC74916DA20EDA5B969169 /* Pods_SimilarWeb_Assignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97810367C8644984DD98A667 /* Pods_SimilarWeb_AssignmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0241DFE4B0B78C04C0400DB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83FA0E1AB810A750C51A42FB /* Pods-SimilarWeb_Assignment.debug.xcconfig */,
+				84B5E5C15515E42175F78B07 /* Pods-SimilarWeb_Assignment.release.xcconfig */,
+				D0D616DE973D557A10F61E66 /* Pods-SimilarWeb_AssignmentTests.debug.xcconfig */,
+				277D691649BF5F9B22E99800 /* Pods-SimilarWeb_AssignmentTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1BB9F9BB9478D8C72F280F6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D9784DCD6E7AFADF5E4F9A6 /* Pods_SimilarWeb_Assignment.framework */,
+				493484CCCC2EAA8E5D32AF80 /* Pods_SimilarWeb_AssignmentTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		841AD8E7261AE65C0044154A = {
 			isa = PBXGroup;
 			children = (
 				841AD8F2261AE65C0044154A /* SimilarWeb_Assignment */,
 				841AD909261AE6630044154A /* SimilarWeb_AssignmentTests */,
 				841AD8F1261AE65C0044154A /* Products */,
+				0241DFE4B0B78C04C0400DB1 /* Pods */,
+				1BB9F9BB9478D8C72F280F6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 841AD90F261AE6630044154A /* Build configuration list for PBXNativeTarget "SimilarWeb_Assignment" */;
 			buildPhases = (
+				3CB2090BB5E61DD9EE81BFFE /* [CP] Check Pods Manifest.lock */,
 				841AD8EC261AE65C0044154A /* Sources */,
 				841AD8ED261AE65C0044154A /* Frameworks */,
 				841AD8EE261AE65C0044154A /* Resources */,
+				2FB6C54DBD289F8025A874A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 841AD912261AE6630044154A /* Build configuration list for PBXNativeTarget "SimilarWeb_AssignmentTests" */;
 			buildPhases = (
+				14E19410716EB054AEA4B6AD /* [CP] Check Pods Manifest.lock */,
 				841AD902261AE6630044154A /* Sources */,
 				841AD903261AE6630044154A /* Frameworks */,
 				841AD904261AE6630044154A /* Resources */,
@@ -194,6 +230,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14E19410716EB054AEA4B6AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimilarWeb_AssignmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FB6C54DBD289F8025A874A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimilarWeb_Assignment/Pods-SimilarWeb_Assignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimilarWeb_Assignment/Pods-SimilarWeb_Assignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimilarWeb_Assignment/Pods-SimilarWeb_Assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CB2090BB5E61DD9EE81BFFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimilarWeb_Assignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		841AD8EC261AE65C0044154A /* Sources */ = {
@@ -360,6 +460,7 @@
 		};
 		841AD910261AE6630044154A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83FA0E1AB810A750C51A42FB /* Pods-SimilarWeb_Assignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,6 +478,7 @@
 		};
 		841AD911261AE6630044154A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84B5E5C15515E42175F78B07 /* Pods-SimilarWeb_Assignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +496,7 @@
 		};
 		841AD913261AE6630044154A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0D616DE973D557A10F61E66 /* Pods-SimilarWeb_AssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +518,7 @@
 		};
 		841AD914261AE6630044154A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 277D691649BF5F9B22E99800 /* Pods-SimilarWeb_AssignmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

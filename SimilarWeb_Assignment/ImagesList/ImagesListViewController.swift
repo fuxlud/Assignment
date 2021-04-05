@@ -15,23 +15,6 @@ class ImagesListViewController: UIViewController {
     private var networkProxy = NetworkProxy()
     private var imageInfos: [ImageInfo] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fetchImagesInfo()
-    }
-    
-    private func fetchImagesInfo() {
-        networkProxy.fetchImagesInfo { [weak self] result in
-            switch result {
-            case let .failure(error):
-                self?.showError(error: error)
-            case let .success(imageInfos):
-                self?.imageInfos = imageInfos
-                self?.tableView?.reloadData()
-            }
-        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let imageDetailsViewController = segue.destination as? ImageDetailsViewController {
             guard let imageInfo = sender as? ImageInfo else {
@@ -45,9 +28,21 @@ class ImagesListViewController: UIViewController {
 }
 
 extension ImagesListViewController: UISearchBarDelegate {
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        fetchImagesInfo()
+        searchBar.resignFirstResponder()
+    }
     
-    internal func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        print("")
+    private func fetchImagesInfo() {
+        networkProxy.fetchImagesInfo { [weak self] result in
+            switch result {
+            case let .failure(error):
+                self?.showError(error: error)
+            case let .success(imageInfos):
+                self?.imageInfos = imageInfos
+                self?.tableView?.reloadData()
+            }
+        }
     }
 }
 

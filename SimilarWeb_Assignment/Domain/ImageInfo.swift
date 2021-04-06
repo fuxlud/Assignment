@@ -35,7 +35,3 @@ struct ImageURLs: Codable {
     let full: URL
     let regular: URL
 }
-
-struct ImageInfoResponce: Decodable {
-    let results: [ImageInfo]
-}

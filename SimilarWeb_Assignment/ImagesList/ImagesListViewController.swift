@@ -13,7 +13,6 @@ class ImagesListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView?
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private var networkProxy = NetworkProxy()
     private var imageInfos: [ImageInfo] = []
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ImageInfo: Decodable {
+public struct ImageInfo: Decodable {
     let urls: ImageURLs
     let imageDescription: String
     let likes: Int
@@ -34,8 +34,4 @@ struct ImageURLs: Codable {
     let thumb: URL
     let full: URL
     let regular: URL
-}
-
-struct ImageInfoResponce: Decodable {
-    let results: [ImageInfo]
 }

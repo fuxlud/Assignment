@@ -36,10 +36,10 @@ extension ImagesListViewController: UISearchBarDelegate {
     }
     
     private func fetchImagesInfo(query: String) {
-        networkProxy.fetchImagesInfo(query: query) { [weak self] result in
-            
+        WebService().fetchImagesDetails(with: query) { [weak self] (result) in
+
             self?.activityIndicator.stopAnimating()
-            
+
             switch result {
             case let .failure(error):
                 self?.showError(error: error)

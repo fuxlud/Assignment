@@ -9,9 +9,10 @@
 import Foundation
 
 extension WebService {
-    public func fetchImagesDetails(with query: String, completion: @escaping NetworkResponseCompletion) {
+    public func fetchImagesDetails(with query: String, completion: @escaping (_ result: Result<[ImageInfo], Error>) -> Void) {
         if TestingService.shared.isRunningTests, TestingService.shared.isMockingNetworkingEnabled {
-            completion(true, nil)
+            let emptyArray = [ImageInfo]()
+            completion(.success(emptyArray))
             return
         }
 
@@ -20,10 +21,10 @@ extension WebService {
         request.execute(dispatcher: dispatcher, onSuccess: { imagesInfoResponce in
             
             let imagesInfo = Array(imagesInfoResponce.results)
-            completion(imagesInfo, nil)
+            completion(.success(imagesInfo))
             
         }) { error in
-            completion(nil, error)
+            completion(.failure(error))
         }
     }
 }

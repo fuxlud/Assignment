@@ -8,8 +8,6 @@
 
 import Foundation
 
-public typealias NetworkResponseCompletion = (Any?, Error?) -> Void
-
 public protocol WebServiceProtocol {
     var dispatcher: NetworkDispatcherProtocol! { get set }
 }
